@@ -1,5 +1,11 @@
 <div class="article">
-  <h2>
-    <%= article.title %>
-  </h2>
+  <h3>
+    <% if has_link %>
+      <%= link_to(article_path(article)) do %>
+        <%= article.title %>
+      <% end %>
+    <% else %>
+      <%= article.title %>
+    <% end %>
+  </h3>
 </div>
