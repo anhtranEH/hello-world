@@ -1,0 +1,14 @@
+.uploader
+  = form_tag({action: :upload}, multipart: true) do
+    #title
+      = label_tag(:title, "Type the title")
+      = text_area_tag(:title)
+    #top-text
+      = label_tag(:top_text, "Type the top text")
+      = text_area_tag(:top_text)
+    #bottom-text
+      = label_tag(:bottom_text, "Type the bottom text")
+      = text_area_tag(:bottom_text)
+    = label_tag(:image_path, "Choose file to upload:")
+    = file_field_tag(:image_path)
+    = submit_tag("Upload", class: "btn-primary")

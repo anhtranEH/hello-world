@@ -1,0 +1,7 @@
+- if @last_image.present?
+  %h3 Recently Uploaded
+  = render('article', article: @last_image, has_link: false)
+= render('uploader')
+%h3 List of all pictures
+- @articles.each do |article|
+  = render('article', article: article, has_link: true)
