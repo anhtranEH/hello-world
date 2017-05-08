@@ -1,0 +1,11 @@
+.article
+  - if has_link
+    = link_to(article_path(article)) do
+      = article.title
+      = article.top_text
+      = article.bottom_text
+  - else
+    = article.title
+    = image_tag(article.original.url, width: "200px", class: "img-thumbnail")
+    = article.top_text
+    = article.bottom_text
